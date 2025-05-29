@@ -7,7 +7,7 @@ import datetime
 
 # Initialize app
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Firebase setup
 cred = credentials.Certificate("firebase_config.json")
